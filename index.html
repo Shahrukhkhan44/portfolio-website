@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahrukh Kahn - AI Student & Researcher | Modern Portfolio</title>
+    <meta name="description" content="Stunning portfolio of Shahrukh Kahn, AI Student and Researcher specializing in Machine Learning, Deep Learning, and Artificial Intelligence. Modern design with dynamic animations.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">SK</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="scrollToSection('home')">SK</div>
+            <div class="nav-menu">
+                <button class="nav-item" onclick="scrollToSection('home')" data-section="home">Home</button>
+                <button class="nav-item" onclick="scrollToSection('about')" data-section="about">About</button>
+                <button class="nav-item" onclick="scrollToSection('skills')" data-section="skills">Skills</button>
+                <button class="nav-item" onclick="scrollToSection('projects')" data-section="projects">Projects</button>
+                <button class="nav-item" onclick="scrollToSection('certificates')" data-section="certificates">Certificates</button>
+                <button class="nav-item" onclick="scrollToSection('contact')" data-section="contact">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="bg-orb bg-orb-1"></div>
+            <div class="bg-orb bg-orb-2"></div>
+            <div class="bg-orb bg-orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="public/profile-pic.jpg" alt="Shahrukh Kahn" class="profile-image" onerror="this.src='https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&w=400'">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">SHAHRUKH KAHN</h1>
+                    <h2 class="hero-subtitle">AI Student & Researcher</h2>
+                    <p class="hero-description">
+                        Passionate about artificial intelligence, machine learning, and cutting-edge technology. 
+                        Building intelligent systems that solve real-world problems and shape the future.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="downloadResume()">
+                            <i data-lucide="download"></i>
+                            Download Resume
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                            <i data-lucide="mail"></i>
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-background">
+            <div class="bg-orb bg-orb-4"></div>
+            <div class="bg-orb bg-orb-5"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <p class="about-text">
+                    I'm a dedicated AI student with a passion for exploring the frontiers of artificial intelligence 
+                    and machine learning. My journey in AI began with curiosity about how machines can learn and 
+                    think, leading me to dive deep into neural networks, deep learning, and intelligent systems.
+                </p>
+                <p class="about-text">
+                    Currently focusing on natural language processing, computer vision, and reinforcement learning, 
+                    I'm constantly working on projects that bridge the gap between theoretical knowledge and 
+                    practical applications. My goal is to contribute to the development of AI systems that can 
+                    make a positive impact on society.
+                </p>
+                <p class="about-text">
+                    When I'm not coding or studying, you can find me reading research papers, experimenting with 
+                    new algorithms, or collaborating on open-source AI projects. I believe in the power of 
+                    continuous learning and sharing knowledge with the community.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-background">
+            <div class="bg-orb bg-orb-6"></div>
+            <div class="bg-orb bg-orb-7"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Skills will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-background">
+            <div class="bg-orb bg-orb-8"></div>
+            <div class="bg-orb bg-orb-9"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="certificates-background">
+            <div class="bg-orb bg-orb-10"></div>
+            <div class="bg-orb bg-orb-11"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certificates</h2>
+            </div>
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificates will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <div class="resume-background">
+            <div class="bg-orb bg-orb-12"></div>
+        </div>
+        <div class="container">
+            <div class="resume-content">
+                <div class="resume-icon">
+                    <i data-lucide="file-text"></i>
+                </div>
+                <h2 class="resume-title">Want to know more about my experience?</h2>
+                <p class="resume-description">
+                    Download my comprehensive resume to explore my educational background, 
+                    projects, skills, and achievements in artificial intelligence and machine learning.
+                </p>
+                <button class="btn btn-primary btn-large" onclick="downloadResume()">
+                    <i data-lucide="download"></i>
+                    Download Resume (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-background">
+            <div class="bg-orb bg-orb-13"></div>
+            <div class="bg-orb bg-orb-14"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Reach out for opportunities, collaborations, or just to say hello! 
+                    I'm always excited to connect with fellow AI enthusiasts and professionals.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/shahrukhposwal2003@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <h3>Connect With Me</h3>
+                    <div class="social-grid" id="socialGrid">
+                        <!-- Social links will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="bg-orb bg-orb-15"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <button class="scroll-top" onclick="scrollToTop()">
+                    <i data-lucide="arrow-up"></i>
+                </button>
+                <div class="footer-text">
+                    <p>Built with HTML, CSS, and JavaScript</p>
+                    <p>© 2025 Shahrukh Kahn. All rights reserved.</p>
+                    <div class="footer-heart">Designed & Developed with ❤️</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
